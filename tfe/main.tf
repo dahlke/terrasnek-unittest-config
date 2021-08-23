@@ -1,13 +1,19 @@
-provider "tfe" {
-  hostname = "app.terraform.io"
-}
-
 variable "email" {
   type = string
 }
 
 variable "org_name" {
   type = string
+}
+
+variable "hostname" {
+  type = string
+  default = "app.terraform.io"
+}
+
+provider "tfe" {
+  hostname = var.hostname
+  ssl_skip_verify = true
 }
 
 resource "tfe_organization" "org" {

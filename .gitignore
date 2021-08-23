@@ -1,2 +1,4 @@
 aws/.terraform/
 tfe/.terraform/
+.terraform.lock.hcl
+*.tfstate*
