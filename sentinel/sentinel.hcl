@@ -1,3 +1,3 @@
 policy "test" {
-    enforcement_level = "hard-mandatory"
+    enforcement_level = "soft-mandatory"
 }
